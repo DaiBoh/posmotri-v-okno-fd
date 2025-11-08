@@ -90,10 +90,14 @@ ol {
 
 /* Контейнер списка карточек */
 .content__list-container {
+    position: relative;
     display: grid;
+    inline-size: 399px;
     block-size: 298px;
     overflow-y: auto;
 }
+
+/* Нам же тут не обязательно задавать фиксированную высоту/ширину, раз мы задали элементам position:relative. Он вроде и исправляет ошибку с прыгающими стилями */
 
 .content__list-container > .content__list,
 .content__list-container > .preloader,
@@ -123,6 +127,7 @@ ol {
 
 /* Контейнер видео */
 .result__video-container {
+    position: relative;
     inline-size: 711px;
     block-size: 386px;
     margin-bottom: 16px;
@@ -139,7 +144,6 @@ ol {
 .content__video-card {
     display: flex;
     align-items: flex-start;
-    gap: 6px;
 }
 
 .content__video-card-thumbnail {
